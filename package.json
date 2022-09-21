@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev:service1": "cross-env SERVICE=service1 next dev",
+    "dev:service2": "cross-env SERVICE=service2 next dev",
+    "build:service1": "cross-env SERVICE=service1 next build",
+    "build:service2": "cross-env SERVICE=service2 next build",
+    "start:service1": "cross-env SERVICE=service1 next start",
+    "start:service2": "cross-env SERVICE=service2 next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -14,7 +17,9 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "8.23.1",
-    "eslint-config-next": "12.3.1"
+    "eslint-config-next": "12.3.1",
+    "rimraf": "^3.0.2"
   }
 }
